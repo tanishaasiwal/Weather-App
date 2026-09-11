@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+:root {
+  --ink: #17212b;
+  --muted: #687581;
+  --sky: #eef8f7;
+  --accent: #e76f51;
+  --line: #dce7e5;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "DM Sans";
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(clouds.jpg);
+}
+.container {
+  background: rgba(255, 255, 255, 0.88);
+  padding: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 24px 70px rgba(44, 61, 68, 0.16);
+  width: 100%;
+  max-width: 450px;
+}
+.eyebrow,
+.label {
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+h1,
+h2,
+h3 {
+  font-family: "space grotesk";
+  color: var(--ink);
+}
+h1 {
+  margin: 4px 0 6px;
+  font-size: clamp(2rem, 8vw, 3rem);
+}
+.intro {
+  color: var(--muted);
+  margin-bottom: 26px;
+}
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#cityInput {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+#cityInput:focus {
+  border-color: var(--accent);
+}
+#searchBtn {
+  padding: 12px 20px;
+  background: var(--ink);
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#searchBtn:hover {
+  background: var(--accent);
+}
+.weather-info {
+  text-align: center;
+}
+#cityName {
+  color: var(--ink);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.weather-icon {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+temp {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.description {
+  font-size: 1.1rem;
+  color: var(--muted);
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.detail-item {
+  background: var(--sky);
+  padding: 12px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.detail-item span:last-child {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.ai-card {
+  margin-top: 22px;
+  padding: 18px;
+  border-left: 4px solid var(--accent);
+  background: #fff8ed;
+  border-radius: 7px;
+  text-align: left;
+}
+
+.ai-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.ai-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.ai-card h3 {
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.ai-card > p {
+  color: #4d5c61;
+  line-height: 1.55;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 18px;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  #searchBtn {
+    width: 100%;
+  }
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.loading {
+  color: #2196f3;
+}
+
+.error {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.hidden {
+  display: none;
+}

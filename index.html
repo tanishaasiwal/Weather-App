@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skyline Weather</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p class="eyebrow">LIVE ATMOSPHERE</p>
+      <h1>Skyline Weather</h1>
+      <p class="intro">CLear forcasts and a little AI help for your day.</p>
+      <div class="search-box">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Enter city name..."
+          autocomplete="off"
+        />
+        <button type="button" id="searchBtn">Search</button>
+      </div>
+      <div id="loading" class="loading hidden">Loading...</div>
+      <div id="error" class="error hidden"></div>
+      <div id="weather-Info" class="weather-info hidden">
+        <h2 id="cityName"></h2>
+        <div class="weather-icon" id="weatherIcon"></div>
+        <div class="temp" id="temparature"></div>
+        <div class="description" id="description"></div>
+        <div class="details">
+          <div class="detail-item">
+            <span class="label">Feels Like</span>
+            <span id="feelsLike"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Humidity</span>
+            <span id="humidity"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Wind Speed</span>
+            <span id="windSpeed"></span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Pressure</span>
+            <span id="pressure"></span>
+          </div>
+        </div>
+        <section class="ai-card" aria-live="polite">
+          <div class="ai-heading">
+            <span class="ai-mark">AI</span>
+            <div>
+              <p class="label">SMART ADVICE</p>
+              <h3 id="aiTitle">Your weather guide</h3>
+            </div>
+          </div>
+          <p id="aiAdvice">
+            Search for a city to get a useful plan for the day.
+          </p>
+        </section>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
